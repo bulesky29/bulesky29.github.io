@@ -19,17 +19,17 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="背景: Mac mini M1 Docker Desktop 4.25.2 系统是Sonoma 14.1 因为存储空间太小，故欲把镜像存储到外接的机械硬盘中。但是docker desktop好像有bug，无法在设置里直接更改，网上也没有找到和这个情况直接相关的bug report。 经查询，可以通过直接修改配置文件的方式修改。  12cd ~&#x2F;.dockervim vim daemon.json">
+    <meta name="description" content="背景: Mac mini M1 Docker Desktop 4.25.2 系统是Sonoma 14.1 因为存储空间太小，故欲把镜像存储到外接的机械硬盘中。但是docker desktop好像有bug，无法在设置里直接更改，网上也没有找到和这个情况直接相关的bug report。 经查询，可以通过直接修改配置文件的方式修改。  12cd ~&#x2F;.dockervim daemon.json   12">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac移动docker镜像至外部硬盘">
 <meta property="og:url" content="http://example.com/2023/11/24/Mac%E7%A7%BB%E5%8A%A8docker%E9%95%9C%E5%83%8F%E8%87%B3%E5%A4%96%E9%83%A8%E7%A1%AC%E7%9B%98/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="背景: Mac mini M1 Docker Desktop 4.25.2 系统是Sonoma 14.1 因为存储空间太小，故欲把镜像存储到外接的机械硬盘中。但是docker desktop好像有bug，无法在设置里直接更改，网上也没有找到和这个情况直接相关的bug report。 经查询，可以通过直接修改配置文件的方式修改。  12cd ~&#x2F;.dockervim vim daemon.json">
+<meta property="og:description" content="背景: Mac mini M1 Docker Desktop 4.25.2 系统是Sonoma 14.1 因为存储空间太小，故欲把镜像存储到外接的机械硬盘中。但是docker desktop好像有bug，无法在设置里直接更改，网上也没有找到和这个情况直接相关的bug report。 经查询，可以通过直接修改配置文件的方式修改。  12cd ~&#x2F;.dockervim daemon.json   12">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://d2eudmx4wsrhgh.cloudfront.net/images/2023/11/13c6eb9583b793e78aae8f44bd88fcad.png">
 <meta property="og:image" content="https://d2eudmx4wsrhgh.cloudfront.net/images/2023/11/b4a89f2b30e10477dbed76ab8a4ac67d.png">
 <meta property="article:published_time" content="2023-11-24T06:03:05.000Z">
-<meta property="article:modified_time" content="2023-11-24T06:21:34.019Z">
+<meta property="article:modified_time" content="2023-11-24T06:22:18.954Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://d2eudmx4wsrhgh.cloudfront.net/images/2023/11/13c6eb9583b793e78aae8f44bd88fcad.png">
@@ -495,7 +495,7 @@
         <p>背景: Mac mini M1 Docker Desktop 4.25.2 系统是Sonoma 14.1</p>
 <p>因为存储空间太小，故欲把镜像存储到外接的机械硬盘中。但是docker desktop好像有bug，无法在设置里直接更改，网上也没有找到和这个情况直接相关的bug report。 经查询，可以通过直接修改配置文件的方式修改。</p>
 <p><img src="https://d2eudmx4wsrhgh.cloudfront.net/images/2023/11/13c6eb9583b793e78aae8f44bd88fcad.png" alt="img"></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.docker</span><br><span class="line">vim vim daemon.json </span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.docker</span><br><span class="line">vim daemon.json </span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> &quot;builder&quot;: &#123;</span><br><span class="line">  &quot;gc&quot;: &#123;</span><br><span class="line">   &quot;defaultKeepStorage&quot;: &quot;20GB&quot;,</span><br><span class="line">   &quot;enabled&quot;: true</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;,</span><br><span class="line"> &quot;experimental&quot;: false,</span><br><span class="line">  &quot;data-root&quot;: &quot;/Volumes/P_disk/dockerimages&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -512,7 +512,7 @@
             <p>Author：<a href="http://example.com">John Doe</a>
             <p>Link：<a href="http://example.com/2023/11/24/Mac%E7%A7%BB%E5%8A%A8docker%E9%95%9C%E5%83%8F%E8%87%B3%E5%A4%96%E9%83%A8%E7%A1%AC%E7%9B%98/">http://example.com/2023/11/24/Mac%E7%A7%BB%E5%8A%A8docker%E9%95%9C%E5%83%8F%E8%87%B3%E5%A4%96%E9%83%A8%E7%A1%AC%E7%9B%98/</a>
             <p>Publish date：<a href="http://example.com/2023/11/24/Mac%E7%A7%BB%E5%8A%A8docker%E9%95%9C%E5%83%8F%E8%87%B3%E5%A4%96%E9%83%A8%E7%A1%AC%E7%9B%98/">November 24th 2023, 2:03:05 pm</a>
-            <p>Update date：<a href="http://example.com/2023/11/24/Mac%E7%A7%BB%E5%8A%A8docker%E9%95%9C%E5%83%8F%E8%87%B3%E5%A4%96%E9%83%A8%E7%A1%AC%E7%9B%98/">November 24th 2023, 2:21:34 pm</a>
+            <p>Update date：<a href="http://example.com/2023/11/24/Mac%E7%A7%BB%E5%8A%A8docker%E9%95%9C%E5%83%8F%E8%87%B3%E5%A4%96%E9%83%A8%E7%A1%AC%E7%9B%98/">November 24th 2023, 2:22:18 pm</a>
             <p>License：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     

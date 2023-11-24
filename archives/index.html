@@ -437,9 +437,9 @@
                 背景: Mac mini M1 Docker Desktop 4.25.2 系统是Sonoma 14.1
 因为存储空间太小，故欲把镜像存储到外接的机械硬盘中。但是docker desktop好像有bug，无法在设置里直接更改，网上也没有找到和这个情况直接相关的bug report。 经查询，可以通过直接修改配置文件的方式修改。
 
-12cd ~/.dockervim vim daemon.json 
+12cd ~/.dockervim daemon.json 
 
-12345678910&#123; &quot;builder&quot;: &#123;  &quot;gc&quot;: &#123;   &quot;defaultKeepStorag...
+12345678910&#123; &quot;builder&quot;: &#123;  &quot;gc&quot;: &#123;   &quot;defaultKeepStorage&qu...
             </div>
             <!-- read more -->
             
