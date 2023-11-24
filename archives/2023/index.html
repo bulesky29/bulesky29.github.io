@@ -429,6 +429,38 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/11/24/Mac%E7%A7%BB%E5%8A%A8docker%E9%95%9C%E5%83%8F%E8%87%B3%E5%A4%96%E9%83%A8%E7%A1%AC%E7%9B%98/">
+                
+                <span class="abstract-title-text">Mac移动docker镜像至外部硬盘</span>
+            </a>
+            <div class="abstract-content">
+                背景: Mac mini M1 Docker Desktop 4.25.2 系统是Sonoma 14.1
+因为存储空间太小，故欲把镜像存储到外接的机械硬盘中。但是docker desktop好像有bug，无法在设置里直接更改，网上也没有找到和这个情况直接相关的bug report。 经查询，可以通过直接修改配置文件的方式修改。
+
+12cd ~/.dockervim vim daemon.json 
+
+12345678910&#123; &quot;builder&quot;: &#123;  &quot;gc&quot;: &#123;   &quot;defaultKeepStorag...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/11/24">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/11/24</span>
+                </div>
+                <!-- tags -->
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/11/20/%E5%8E%9F%E5%9B%A0/">
                 
                 <span class="abstract-title-text">原因</span>
@@ -594,7 +626,18 @@ Run server1$ hexo ...
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
         
         
     
@@ -603,7 +646,7 @@ Run server1$ hexo ...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 2
+        Total : 3
         </div>
         <!-- search  -->
         
@@ -632,6 +675,12 @@ Run server1$ hexo ...
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/24</span>
+            <a class="archive-post-title" href="/2023/11/24/Mac%E7%A7%BB%E5%8A%A8docker%E9%95%9C%E5%83%8F%E8%87%B3%E5%A4%96%E9%83%A8%E7%A1%AC%E7%9B%98/">Mac移动docker镜像至外部硬盘</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">11/20</span>
