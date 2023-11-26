@@ -444,23 +444,50 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/11/26/windows%E5%88%86%E9%85%8D%E7%AB%AF%E5%8F%A3%E5%A4%B1%E8%B4%A5%E7%96%91%E9%9A%BE%E6%8E%92%E6%9F%A5/">
+                
+                <span class="abstract-title-text">windows分配端口失败疑难排查</span>
+            </a>
+            <div class="abstract-content">
+                Windows中有的时候会出现端口不能使用的情况，并且检查会发现端口也并没有被占用，这种情况，
+是因为windows中有一个TCP动态端口范围，Hyper-V等服务会申请一些端口提前占用，以备使用。这样端口没有被占用，但是一些程序申请端口也会失败，并表现为权限不足等现象。
+而windows有的时候自动更新会导致这个端口的启始范围为1024。
+1234567#该命令查看目前的TCP动态端口范围netsh int ipv4 show dynamicport tcp#该命令查看已经被征用的端口netsh int ipv4 show excludedportrange protocol=tcp#...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/11/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/11/26</span>
+                </div>
+                <!-- tags -->
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/11/24/Mac%E7%A7%BB%E5%8A%A8docker%E9%95%9C%E5%83%8F%E8%87%B3%E5%A4%96%E9%83%A8%E7%A1%AC%E7%9B%98/">
                 
                 <span class="abstract-title-text">Mac移动docker镜像至外部硬盘</span>
             </a>
             <div class="abstract-content">
                 背景: Mac mini M1 Docker Desktop 4.25.2 系统是Sonoma 14.1
-因为存储空间太小，故欲把镜像存储到外接的机械硬盘中。但是docker desktop好像有bug，无法在设置里直接更改，网上也没有找到和这个情况直接相关的bug report。 经查询，可以通过直接修改配置文件的方式修改。
-
-12cd ~/.dockervim daemon.json 
-
-12345678910&#123; &quot;builder&quot;: &#123;  &quot;gc&quot;: &#123;   &quot;defaultKeepStorage&qu...
+后续补充请不要使用下列方法。经过测试，虽然docker的文件存储到了默认位置以外的地方，但是依旧不能使用。会出现权限上的问题。一开始我以为是磁盘挂载方式的问题。但是重新挂载硬盘并设置suid后，依旧不行，并且除了默认位置以外，即使是mac上的内部硬盘也会出现权限问题，表现在有些镜像的pull会失败。真的是非常可惜，以后有机会再处理一下。
+因为存储空间太小，故欲把镜像存储到外接的机械硬盘中。但是docker desktop好像有bug，无法在设置里直接更改，网上也没有找到和这个情况直接...
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/11/24">
+                <div class="abstract-date" title="Last updated: 2023/11/26">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/11/24</span>
                 </div>
                 <!-- tags -->
@@ -728,7 +755,16 @@ Run server1$ hexo ...
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
         
         
         
@@ -743,7 +779,7 @@ Run server1$ hexo ...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 3
+        Total : 4
         </div>
         <!-- search  -->
         
@@ -772,6 +808,12 @@ Run server1$ hexo ...
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/26</span>
+            <a class="archive-post-title" href="/2023/11/26/windows%E5%88%86%E9%85%8D%E7%AB%AF%E5%8F%A3%E5%A4%B1%E8%B4%A5%E7%96%91%E9%9A%BE%E6%8E%92%E6%9F%A5/">windows分配端口失败疑难排查</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">11/24</span>
