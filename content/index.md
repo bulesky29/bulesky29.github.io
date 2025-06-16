@@ -1,6 +1,5 @@
 ---
-title: Welcome to Quartz
+title: Welcome to Tianyi's Page
 ---
-
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+目前还没想好些什么，总之先弄好。
+[[常用命令]]
