@@ -26,9 +26,9 @@ monthFormat: "2006-01"
 dateFormat: "2006-01-02"
 timeFormat: "2006-01-02 15:04:05"
 
-author: D-Sketon
-email: xxx@example.com
-description: "少女祈祷中..."
+author: Bulesky29
+email: zghbhswty@gmail.com
+description: "程序员？"
 subtitle: "少女祈祷中..."
 
 banner: "images/banner.webp"
@@ -46,7 +46,7 @@ banner_srcset:
     - src: "images/banner.webp"
       media: "(min-width: 800px)"
 
-avatar: "avatar.webp"
+avatar: "avatar.png"
 
 # Control the display of the post cover
 # If not set, the banner image will be displayed by default
@@ -347,7 +347,6 @@ giscus:
   reactionsEnabled: 1
   emitMetadata: 0
   inputPosition: "top"
-  lang: en
   # commentTheme: preferred_color_scheme invalid
   
 
