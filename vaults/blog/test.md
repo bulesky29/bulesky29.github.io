@@ -1,6 +1,6 @@
 ---
 date: 2025-06-17
-draft: true
+draft: false
 tags:
   - test
 categories:
@@ -8,3 +8,4 @@ categories:
 title: test
 description:
 ---
+这是测试文件
