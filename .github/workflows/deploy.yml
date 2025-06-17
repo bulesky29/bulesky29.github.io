@@ -53,6 +53,7 @@ jobs:
           if [ -f "tianyi_site/content/posts/friend.md" ]; then
             mv tianyi_site/content/posts/friend.md tianyi_site/content/
           fi
+          rm -r tianyi_site/content/posts/00-template
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
