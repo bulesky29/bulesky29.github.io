@@ -1,0 +1,3 @@
+[submodule "tianyi_site/themes/reimu"]
+	path = tianyi_site/themes/reimu
+	url = https://github.com/D-Sketon/hugo-theme-reimu.git
