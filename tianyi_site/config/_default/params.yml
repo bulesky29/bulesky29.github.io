@@ -337,16 +337,16 @@ gitalk:
 
 # https://giscus.app/zh-CN
 giscus:
-  enable: false
-  repo:
-  repoId:
-  category:
-  categoryId:
-  mapping: mapping
+  enable: true
+  repo: "bulesky29/comment"
+  repoId: "R_kgDOO9JaEQ"
+  category: "Announcements"
+  categoryId: "DIC_kwDOO9JaEc4CrnRL"
+  mapping: "pathname"
   strict: 0
   reactionsEnabled: 1
   emitMetadata: 0
-  inputPosition: bottom
+  inputPosition: "top"
   # commentTheme: preferred_color_scheme invalid
   # lang: zh-CN # deprecated, use html.lang instead
 
