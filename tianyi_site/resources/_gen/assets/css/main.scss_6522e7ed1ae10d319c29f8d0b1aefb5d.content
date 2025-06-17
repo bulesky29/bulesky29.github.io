@@ -2643,6 +2643,10 @@ mjx-container::-webkit-scrollbar {
   cursor: var(--cursor-default) !important;
 }
 
+.giscus-comment {
+  width: auto;
+}
+
 .wl-content,
 .vcontent,
 .gt-header-preview.markdown-body,
