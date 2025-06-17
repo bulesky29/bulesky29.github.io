@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "test.md",
+                "file": "Welcome.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "test"
+              "title": "Welcome"
             }
           }
         ],
@@ -186,15 +186,15 @@
   },
   "active": "b600115ab445c66e",
   "lastOpenFiles": [
-    "Welcome.md",
     "test.md",
-    "Untitled.md",
-    "00-template/博客模板.md",
+    "friend.md",
+    "about.md",
+    "_index.md",
     "archives/link_test.md",
     "archives/_index.md",
-    "about.md",
-    "friend.md",
-    "_index.md",
+    "00-template/博客模板.md",
+    "Welcome.md",
+    "Untitled.md",
     "test/测试1.md",
     "test/测试2.md",
     "test/test1.md",
