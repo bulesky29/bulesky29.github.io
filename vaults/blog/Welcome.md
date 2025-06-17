@@ -1,34 +1,11 @@
 ---
 date: 2025-06-17
 draft: false
-tags:
-  - 测试
-categories:
-  - test
+tags: []
+categories: 
 title: Welcome
 ---
 
-# 标题1
+# 欢迎页
 
-欢迎
-[[link_test]]
-
-测试1
-测试2
-
-测试3
-测试4
-
-测试5
-
-[[test]]
-[[日语1]]
-[[日语4]]
-
-[[测试111]]
-
-# 标题2
-
-测试内容
-
-搜索测试
+欢迎来到我的页面
