@@ -282,7 +282,7 @@ comment:
 # version 1.5.1
 # notify and verify have been deprecated
 valine:
-  enable: true # if you want to use valine,please set this value is true
+  enable: false # if you want to use valine,please set this value is true
   appId: "syjmms5hEFtwl37YA1ap1IEq-gzGzoHsz" 
   appKey: "wg8KrWaKK6nQ3x4ec3KbKsC5"
   pageSize: 10 # comment list page size
