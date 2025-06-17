@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "archives/link_test.md",
+                "file": "Welcome.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "link_test"
+              "title": "Welcome"
             }
           }
         ]
@@ -171,8 +171,8 @@
   },
   "active": "00855bbd251e62e4",
   "lastOpenFiles": [
-    "archives/_index.md",
     "archives/link_test.md",
+    "archives/_index.md",
     "Welcome.md",
     "about.md",
     "friend.md",

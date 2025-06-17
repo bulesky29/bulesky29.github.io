@@ -49,6 +49,7 @@ jobs:
           cp -r vaults/blog tmp
           # 移除不需要的模板文件
           rm -r tmp/blog/00-template
+          rm -r tmp/blog/.obsidian
           # 执行导出
           obsidian-export tmp/blog tianyi_site/content/post
           
