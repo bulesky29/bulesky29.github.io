@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0a5b2c80b40b449f",
+        "id": "398092e98effe0a9",
         "type": "tabs",
         "children": [
           {
-            "id": "86d64c1dc6ddd769",
+            "id": "9b7de2ece84e3457",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -169,11 +169,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "86d64c1dc6ddd769",
+  "active": "9b7de2ece84e3457",
   "lastOpenFiles": [
+    "Welcome.md",
+    "folder1/测试111.md",
+    "folder1",
     "archives/00-japanese/日语4.md",
     "archives/00-japanese/日语1.md",
-    "Welcome.md",
     "archives/00-japanese/日语3.md",
     "archives/00-japanese/日语2.md",
     "00-template/博客日语模板.md",
