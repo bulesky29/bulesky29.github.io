@@ -1,19 +1,21 @@
+{{- /* layouts/_default/_markup/render-image.html */ -}}
 {{- $url := urls.Parse .Destination -}}
 {{- $scheme := $url.Scheme -}}
+{{- $finalURL := .Destination -}}
 
-<img src="
-  {{- if eq $scheme "" -}}
-    {{- if strings.HasSuffix $url.Path ".md" -}}
-      {{- relref .Page .Destination | safeURL -}}
+{{- if eq $scheme "" -}}
+  {{- if eq .Page.Section "post" -}}
+    {{- $finalURL = printf "/post/%s" .Destination -}}
+  {{- else if eq .Page.Section "archives" -}} {{/* <-- 确保这里也是正确的 */}}
+    {{- if strings.HasPrefix .Destination "../" -}}
+      {{- $finalURL = printf "/post/%s" (strings.TrimPrefix "../" .Destination) -}}
     {{- else -}}
-      {{- printf "/%s%s" .Page.File.Dir .Destination | safeURL -}}
+      {{- $finalURL = printf "/archive/%s" .Destination -}}
     {{- end -}}
-  {{- else -}}
-    {{- .Destination | safeURL -}}
-  {{- end -}}"
-  {{- with .Title }} title="{{ . | safeHTML }}"{{- end -}}
-  {{- with .Text }} alt="{{ . | safeHTML }}"
   {{- end -}}
-/>
+{{- end -}}
 
-{{- /* whitespace stripped here to avoid trailing newline in rendered result caused by file EOL */ -}}
+<img src="{{ $finalURL | safeURL }}"
+  {{- with .Title }} title="{{ . | safeHTML }}"{{- end -}}
+  {{- with .Text }} alt="{{ . | safeHTML }}"{{- end -}}
+/>

@@ -22,16 +22,17 @@
     
 
     <item>
-      <title>我的第一篇文章</title>
+      <title>我的第一篇文章1</title>
       <link>http://localhost:1313/post/welcome/</link>
       <pubDate>Tue, 17 Jun 2025 12:00:00 &#43;0900</pubDate>
       <author>xxx@example.com (D-Sketon)</author>
       <guid>http://localhost:1313/post/welcome/</guid>
       <description>
-        <![CDATA[<h1>我的第一篇文章</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>我的第一篇文章1</h1><p>Author: D-Sketon(xxx@example.com)</p>
         
           <p>这是我的第一篇测试文章，用来检查主题是否正常工作。</p>
-<p>这是链接<a href="/post/test/test1/">test1</a></p>
+<p><a href="/post/test/%E6%B5%8B%E8%AF%951/">测试1</a>
+<a href="/post/test/%E6%B5%8B%E8%AF%952/">测试2</a></p>
         
         <hr><p>Published on 2025-06-17 at <a href='http://localhost:1313/'>My New Hugo Site</a>, last modified on 2025-06-17</p>]]>
       </description>

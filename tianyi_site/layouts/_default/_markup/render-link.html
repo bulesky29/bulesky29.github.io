@@ -1,18 +1,31 @@
+{{- /* layouts/_default/_markup/render-link.html */ -}}
 {{- $url := urls.Parse .Destination -}}
 {{- $scheme := $url.Scheme -}}
+{{- $finalURL := .Destination -}}
 
-<a href="
-  {{- if eq $scheme "" -}}
-    {{- if strings.HasSuffix $url.Path ".md" -}}
-      {{- relref .Page .Destination | safeURL -}}
-    {{- else -}}
-      {{- .Destination | safeURL -}}
+{{- if eq $scheme "" -}}
+  {{- if strings.HasSuffix $url.Path ".md" -}}
+    {{- $pathForRelref := .Destination -}}
+    {{- if eq .Page.Section "archives" -}}
+      {{- if strings.HasPrefix .Destination "../" -}}
+        {{- $pathForRelref = strings.TrimPrefix "../" .Destination -}}
+      {{- end -}}
     {{- end -}}
+    {{- $finalURL = relref .Page $pathForRelref -}}
   {{- else -}}
-    {{- .Destination | safeURL -}}
-  {{- end -}}"
+    {{- if eq .Page.Section "post" -}}
+      {{- $finalURL = printf "/post/%s" .Destination -}}
+    {{- else if eq .Page.Section "archives" -}} {{/* <-- 修正了这里的拼写 */}}
+      {{- if strings.HasPrefix .Destination "../" -}}
+        {{- $finalURL = printf "/post/%s" (strings.TrimPrefix "../" .Destination) -}}
+      {{- else -}}
+        {{- $finalURL = printf "/archives/%s" .Destination -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<a href="{{ $finalURL | safeURL }}"
   {{- with .Title }} title="{{ . | safeHTML }}"{{- end -}}>
   {{- .Text | safeHTML -}}
 </a>
-
-{{- /* whitespace stripped here to avoid trailing newline in rendered result caused by file EOL */ -}}

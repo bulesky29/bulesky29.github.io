@@ -22,43 +22,51 @@ jobs:
           curl --proto '=https' --tlsv1.2 -LsSf https://github.com/zoni/obsidian-export/releases/download/v25.3.0/obsidian-export-installer.sh | sh
           echo "$HOME/.local/bin" >> $GITHUB_PATH
 
-      # 步骤 3: 运行 obsidian-export 进行转换
-      # --frontmatter=delete: 防止 frontmatter 重复
-      # --no-recursive-embeds: 避免无限循环嵌入
-      # --no-obsidian-header: 不在输出文件中添加 obsidian url 头
+      - name: Prepare Hugo content directories
+        run: |
+          # 清理旧的 content 目录，确保每次构建都是干净的
+          rm -rf tianyi_site/content/posts
+          rm -rf tianyi_site/content/archives
+          rm -rf tianyi_site/content/about.md
+          rm -rf tianyi_site/content/friend.md
+          mkdir -p tianyi_site/content/posts
+          mkdir -p tianyi_site/content/archives
+
       - name: Export Obsidian vault to Hugo content
         run: |
-          # 创建 Hugo 内容目录（如果不存在）
-          mkdir -p tianyi_site/content/posts
-          # 运行导出命令
+          # 运行导出命令，直接导出到 tianyi_site/content/posts
           obsidian-export \
-            --frontmatter=auto \
-            --no-recursive-embeds \
             vaults/blog \
             tianyi_site/content/posts
 
-      # 步骤 4: 安装 Hugo
+      - name: Move special pages and archives
+        run: |
+          # 移动 archives 到独立目录
+          if [ -d "tianyi_site/content/posts/archives" ]; then
+            mv tianyi_site/content/posts/archives/* tianyi_site/content/archives/
+            rm -r tianyi_site/content/posts/archives
+          fi
+          # 移动 about.md 和 friend.md 到 content 根目录
+          if [ -f "tianyi_site/content/posts/about.md" ]; then
+            mv tianyi_site/content/posts/about.md tianyi_site/content/
+          fi
+          if [ -f "tianyi_site/content/posts/friend.md" ]; then
+            mv tianyi_site/content/posts/friend.md tianyi_site/content/
+          fi
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest' # 使用最新版 Hugo
-      
-      - name: hugo mod tidy
-        run: hugo mod tidy --source tianyi_site
+          hugo-version: 'latest'
 
-      # 步骤 5: 构建 Hugo 站点
-      # --source 指定 hugo 项目的根目录
-      - name: Build Hugo site
-        run: hugo --source tianyi_site --destination hugo_site/public
+      - name: Run Hugo mod tidy and build site
+        run: |
+          hugo mod tidy --source tianyi_site
+          hugo --source tianyi_site --destination hugo_site/public
 
-      # 步骤 6: 部署到 GitHub Pages
-      # 将 hugo_site/public 目录下的内容推送到 gh-pages 分支
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          # GITHUB_TOKEN 是由 Actions 自动生成的，有权限推送到本仓库
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Hugo 生成的静态文件默认放在 public 目录
           publish_dir: ./hugo_site/public
-          # 部署到 gh-pages 分支，这是 GitHub Pages 的标准实践
           publish_branch: gh-pages
