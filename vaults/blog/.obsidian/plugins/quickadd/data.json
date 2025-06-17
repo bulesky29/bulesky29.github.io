@@ -29,6 +29,36 @@
       "openFileInMode": "default",
       "fileExistsMode": "Append to the bottom of the file",
       "setFileExistsBehavior": true
+    },
+    {
+      "id": "bb3cebac-1588-4bd0-a336-d14097a248f7",
+      "name": "博客日语基本模板",
+      "type": "Template",
+      "command": false,
+      "templatePath": "00-template/博客日语模板.md",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "archives"
+        ],
+        "chooseWhenCreatingNote": true,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Append to the bottom of the file",
+      "setFileExistsBehavior": true
     }
   ],
   "macros": [],
