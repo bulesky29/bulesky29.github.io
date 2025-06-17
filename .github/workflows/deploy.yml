@@ -24,50 +24,56 @@ jobs:
           curl --proto '=https' --tlsv1.2 -LsSf https://github.com/zoni/obsidian-export/releases/download/v25.3.0/obsidian-export-installer.sh | sh
           echo "$HOME/.local/bin" >> $GITHUB_PATH
 
-      - name: Prepare Hugo content directories
-        run: |
-          # 清理旧的 content 目录，确保每次构建都是干净的
-          rm -rf tianyi_site/content/posts
-          rm -rf tianyi_site/content/archives
-          rm -rf tianyi_site/content/about.md
-          rm -rf tianyi_site/content/friend.md
-          mkdir -p tianyi_site/content/posts
-          mkdir -p tianyi_site/content/archives
-
-      - name: Export Obsidian vault to Hugo content
-        run: |
-          # 运行导出命令，直接导出到 tianyi_site/content/posts
-          obsidian-export \
-            vaults/blog \
-            tianyi_site/content/posts
-
-      - name: Move special pages and archives
-        run: |
-          # 移动 archives 到独立目录
-          if [ -d "tianyi_site/content/posts/archives" ]; then
-            mv tianyi_site/content/posts/archives/* tianyi_site/content/archives/
-            rm -r tianyi_site/content/posts/archives
-          fi
-          # 移动 about.md 和 friend.md 到 content 根目录
-          if [ -f "tianyi_site/content/posts/about.md" ]; then
-            mv tianyi_site/content/posts/about.md tianyi_site/content/
-          fi
-          if [ -f "tianyi_site/content/posts/friend.md" ]; then
-            mv tianyi_site/content/posts/friend.md tianyi_site/content/
-          fi
-          rm -r tianyi_site/content/posts/00-template
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
 
-      - name: Run Hugo mod tidy and build site
+      - name: Prepare Content from Obsidian Vault
         run: |
+          echo "--- 1. Cleaning and creating directories ---"
+          # 清理并重建临时目录和内容目录，确保构建环境干净
+          rm -rf tianyi_site/content/post
+          rm -rf tianyi_site/content/archives
+          rm -rf tmp
+          mkdir -p tianyi_site/content/post
+          mkdir -p tianyi_site/content/archives
+          mkdir -p tmp
+          
+          echo "--- 2. Tidying Hugo modules ---"
+          # 根据 go.mod 清理 Hugo 模块
           hugo mod tidy --source tianyi_site
+          
+          echo "--- 3. Exporting from Obsidian vault ---"
+          # 将 Obsidian vault 内容复制到临时目录进行处理
+          cp -r vaults/blog tmp
+          # 移除不需要的模板文件
+          rm -r tmp/blog/00-template
+          # 执行导出
+          obsidian-export tmp/blog tianyi_site/content/post
+          
+          echo "--- 4. Organizing content ---"
+          # 移动 'archives' 目录下的文章
+          if [ -d "tianyi_site/content/post/archives" ]; then
+            mv tianyi_site/content/post/archives/* tianyi_site/content/archives/
+            rm -r tianyi_site/content/post/archives
+          fi
+          # 移动 'about.md' 页面
+          if [ -f "tianyi_site/content/post/about.md" ]; then
+            mv tianyi_site/content/post/about.md tianyi_site/content/
+          fi
+          # 移动 'friend.md' 页面
+          if [ -f "tianyi_site/content/post/friend.md" ]; then
+            mv tianyi_site/content/post/friend.md tianyi_site/content/
+          fi
+          
+          echo "--- Content preparation complete ---"
+
+
+      - name: Build Hugo Site
+        run: |
           hugo --source tianyi_site --destination public
 
-      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
