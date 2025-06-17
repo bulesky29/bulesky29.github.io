@@ -63,11 +63,11 @@ jobs:
       - name: Run Hugo mod tidy and build site
         run: |
           hugo mod tidy --source tianyi_site
-          hugo --source tianyi_site --destination hugo_site/public
+          hugo --source tianyi_site --destination public
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./hugo_site/public
+          publish_dir: ./tianyi_site/public
           publish_branch: gh-pages
