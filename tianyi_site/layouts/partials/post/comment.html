@@ -211,7 +211,7 @@
         giscusScript.setAttribute('data-emit-metadata', '{{ $params.giscus.emitMetadata }}');
         giscusScript.setAttribute('data-input-position', '{{ $params.giscus.inputPosition }}');
         giscusScript.setAttribute('data-theme', domMode === 'dark' ? 'dark' : 'light');
-        giscusScript.setAttribute('data-lang', document.documentElement.lang || 'en');
+        giscusScript.setAttribute('data-lang', '{{ $params.giscus.lang }}' || 'en');
         giscusScript.setAttribute('crossorigin', 'anonymous');
         giscusScript.async = true;
         container.appendChild(giscusScript);

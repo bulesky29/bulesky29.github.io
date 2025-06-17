@@ -347,8 +347,9 @@ giscus:
   reactionsEnabled: 1
   emitMetadata: 0
   inputPosition: "top"
+  lang: en
   # commentTheme: preferred_color_scheme invalid
-  # lang: zh-CN # deprecated, use html.lang instead
+  
 
 ########################################
 # Search

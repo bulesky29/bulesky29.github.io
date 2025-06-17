@@ -11,3 +11,7 @@ baseName = "algolia"
 isPlainText = true
 mediaType = "application/json"
 notAlternative = true
+
+[security.headers]
+  [security.headers.contentSecurityPolicy]
+    frameAncestors = ["'self'", "https://giscus.app/"]
