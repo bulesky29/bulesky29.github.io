@@ -211,7 +211,16 @@
         giscusScript.setAttribute('data-emit-metadata', '{{ $params.giscus.emitMetadata }}');
         giscusScript.setAttribute('data-input-position', '{{ $params.giscus.inputPosition }}');
         giscusScript.setAttribute('data-theme', domMode === 'dark' ? 'dark' : 'light');
-        giscusScript.setAttribute('data-lang', '{{ $params.giscus.lang }}' || 'en');
+
+
+        // 处理语言代码，确保兼容性
+        const docLang = document.documentElement.lang || 'en';
+        const langBase = docLang.split('-')[0];
+        const supportedLangs = ['en', 'zh-CN', 'zh-TW', 'es', 'fr', 'de', 'nl', 'it', 'ja', 'ko', 'pl', 'ru', 'uk', 'vi'];
+        const giscusLang = supportedLangs.includes(docLang) ? docLang : 
+                           supportedLangs.includes(langBase) ? langBase : 'en';
+
+
         giscusScript.setAttribute('crossorigin', 'anonymous');
         giscusScript.async = true;
         container.appendChild(giscusScript);
