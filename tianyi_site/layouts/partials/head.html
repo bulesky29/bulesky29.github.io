@@ -3,6 +3,17 @@
   name="viewport"
   content="width=device-width, initial-scale=1, shrink-to-fit=no"
 />
+
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' https://giscus.app;
+  frame-src 'self' https://giscus.app;
+  connect-src 'self' https://giscus.app;
+  img-src 'self' data: https://giscus.app;
+  style-src 'self' 'unsafe-inline' https://giscus.app;
+">
+
+
 {{- partial "head/init.html" . -}}
 {{- $title := .Title -}}
 {{- if .IsHome -}}
@@ -34,18 +45,9 @@
   content="{{ .Params.description | default .Site.Params.description | safeHTML }}"
 />
 
----
 
-****
-<meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  script-src 'self' https://giscus.app;
-  frame-src 'self' https://giscus.app;
-  connect-src 'self' https://giscus.app;
-  img-src 'self' data: https://giscus.app;
-  style-src 'self' 'unsafe-inline' https://giscus.app;
-">
----
+
+
 
 {{- $site := .Site -}}
 {{- partialCached "head/analytics.html" . -}}
