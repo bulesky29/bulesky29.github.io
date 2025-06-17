@@ -282,13 +282,13 @@ comment:
 # version 1.5.1
 # notify and verify have been deprecated
 valine:
-  enable: false # if you want to use valine,please set this value is true
-  appId: # leancloud application app id
-  appKey: # leancloud application app key
+  enable: true # if you want to use valine,please set this value is true
+  appId: "syjmms5hEFtwl37YA1ap1IEq-gzGzoHsz" 
+  appKey: "wg8KrWaKK6nQ3x4ec3KbKsC5"
   pageSize: 10 # comment list page size
   avatar: mp # gravatar style https://valine.js.org/#/avatar
   # lang: zh-cn # deprecated, use html.lang instead
-  placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
+  placeholder: 我要发言了 
   guest_info: nick,mail,link #valine comment header info
   recordIP: true # whether to record the IP address of the commenters
   highlight: true # whether to highlight the code blocks
