@@ -1,0 +1,1 @@
+rm -r tianyi_site/content

@@ -15,4 +15,4 @@ mv tianyi_site/content/post/archives/* tianyi_site/content/archives
 rm -r tianyi_site/content/post/archives
 mv tianyi_site/content/post/about.md tianyi_site/content
 mv tianyi_site/content/post/friend.md tianyi_site/content
-hugo server --source tianyi_site -D
+hugo server --source tianyi_site
