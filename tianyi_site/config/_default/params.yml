@@ -355,10 +355,10 @@ giscus:
 ########################################
 
 algolia_search:
-  enable: false
-  appID:
-  apiKey:
-  indexName:
+  enable: true
+  appID: 95XBR0B3U7
+  apiKey: f2f7c0e422b7a7204641aab529afdfab
+  indexName: hugo_blog
   hits:
     per_page: 10
 
