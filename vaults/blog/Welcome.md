@@ -3,7 +3,8 @@ date: 2025-06-17
 draft: false
 tags:
   - 测试
-categories: 
+categories:
+  - test
 title: Welcome
 ---
 欢迎
@@ -16,3 +17,5 @@ title: Welcome
 测试4
 
 测试5
+
+[[test]]
