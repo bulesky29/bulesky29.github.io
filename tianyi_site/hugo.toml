@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://bulesky29.com/'
 languageCode = 'en-us'
 title = 'Bulesky29のblog'
 theme = ["github.com/D-Sketon/hugo-theme-reimu"]
