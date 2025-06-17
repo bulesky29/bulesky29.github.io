@@ -1,5 +1,4 @@
 {{- define "main" -}}
-  {{-/* 修改下面这一行，去掉 where 过滤 */-}}
   {{- $paginator := (.Paginate .Site.RegularPages).Pages.GroupByDate .Site.Params.yearFormat -}}
   <div
     class="archives-outer-wrap"
