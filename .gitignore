@@ -1,3 +1,5 @@
 tianyi_site/content
 tianyi_site/public
 tianyi_site/.DS_Store
+tmp/
+tianyi_site/resources/_gen/assets/css
