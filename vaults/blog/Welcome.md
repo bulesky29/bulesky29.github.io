@@ -11,13 +11,17 @@ title: Welcome
 欢迎来到我的网站
 
 ---
-
 # Welcome
 
-welcome to my web site
+Welcome to my website
 
-[[test]]
+---
+# ようこそ
 
+ようこそ、私のウェブサイトへ
 
-图床测试
-![](https://raw.githubusercontent.com/bulesky29/blog_image/main/img/Screenshot%202025-06-17%20220937.png)
+---
+
+# 导航栏
+
+文章待写中...

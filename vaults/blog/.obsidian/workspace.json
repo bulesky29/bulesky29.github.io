@@ -20,107 +20,8 @@
               "icon": "lucide-file",
               "title": "Welcome"
             }
-          },
-          {
-            "id": "6c44c6aaf0070c09",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Welcome.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Welcome"
-            }
-          },
-          {
-            "id": "bd7b53c2302e4032",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Welcome.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Welcome"
-            }
-          },
-          {
-            "id": "e5b0ea3a5f2e2b63",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Welcome.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Welcome"
-            }
-          },
-          {
-            "id": "98e7f8db957b3cf2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Welcome.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Welcome"
-            }
-          },
-          {
-            "id": "f879568696c1112a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Welcome.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Welcome"
-            }
-          },
-          {
-            "id": "41339732c46f6754",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Welcome.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Welcome"
-            }
-          },
-          {
-            "id": "9dcd5c92da4e42d8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "archives/test.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "test"
-            }
           }
-        ],
-        "currentTab": 7
+        ]
       }
     ],
     "direction": "vertical"
@@ -268,25 +169,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9dcd5c92da4e42d8",
+  "active": "9b7de2ece84e3457",
   "lastOpenFiles": [
-    "Welcome.md",
+    "archives/_index.md",
     "archives/test.md",
     "00-template/博客模板.md",
-    "链接测试.md",
-    "archives/链接测试.md",
-    "archives/标签测试.md",
     "00-template/博客日语模板.md",
-    "test/多语言测试.en.md",
-    "test/多语言测试.jp.md",
-    "test/多语言测试.zh.md",
-    "_index.md",
-    "test",
-    "archives/_index.md",
-    "about.md",
-    "friend.md",
+    "Welcome.md",
     "folder1/测试111.md",
-    "test.md",
     "folder1",
     "archives/00-japanese/日语4.md",
     "archives/00-japanese/日语1.md",
@@ -294,11 +184,16 @@
     "archives/00-japanese/日语2.md",
     "00-template/Untitled.md",
     "archives/00-japanese",
+    "test.md",
+    "friend.md",
+    "about.md",
+    "_index.md",
     "archives/link_test.md",
     "Untitled.md",
     "test/测试1.md",
     "test/测试2.md",
     "test/test1.md",
+    "草稿测试.md",
     "archives",
     "archives",
     "00-template",

@@ -107,8 +107,8 @@ footer:
 sidebar: right
 
 social:
-  # email: mailto:xxx@gmail.com
-  # github: https://github.com/yourname
+  email: zghbhswty@gmail.com
+  github: https://github.com/bulesky29
   # google: https://plus.google.com/yourname
   # twitter: https://twitter.com/yourname
   # facebook: https://www.facebook.com/yourname
@@ -120,7 +120,7 @@ social:
   # flickr: https://www.flickr.com/photos/yourname
   # dribbble: https://dribbble.com/yourname
   # behance: https://www.behance.net/yourname
-  # bilibili: https://space.bilibili.com/yourname
+  bilibili: https://space.bilibili.com/436385520
   # weibo: https://weibo.com/yourname
   # zhihu: https://www.zhihu.com/people/yourname
   # reddit: https://www.reddit.com/user/yourname
@@ -131,7 +131,7 @@ social:
   # keybase: https://keybase.io/yourname
   # telegram: https://t.me/yourname
   # discord: https://discordapp.com/users/yourname
-  # steam: https://steamcommunity.com/id/yourname
+  steam: https://steamcommunity.com/id/wtywty123
 
 widgets:
   - category
@@ -511,8 +511,8 @@ share:
   # - linkedin
   # - reddit
   # - weibo
-  # - qq
-  # - weixin
+  - qq
+  - weixin
 
 # show categories card on home page
 home_categories:
