@@ -1,7 +1,8 @@
 ---
 date: 2025-06-17
 draft: false
-tags: 
+tags:
+  - default
 categories:
   - default
 title: Welcome
