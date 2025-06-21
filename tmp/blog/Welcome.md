@@ -6,6 +6,7 @@ tags:
 categories:
   - default
 title: Welcome
+weight: -1
 ---
 
 # 欢迎页
@@ -24,3 +25,4 @@ Welcome to my website
 # 导航栏
 
 文章待写中...
+[[日语相关文章导航栏]]
